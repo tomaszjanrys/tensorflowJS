@@ -88,22 +88,73 @@
     <!-- modele -->
     <div class="container">
         <div class="column">
-            <p><strong>Modele</strong> to wielowymiarowe tablice o jednolitym typie (nazywanym dtype )
-                <b><u>nigdy nie można </u></b>zaktualizować zawartości tensora, a jedynie utworzyć nowy.
-                <b>Rangi</b> mowia ile tensor ma osi. liczby mozna np. wymnazac [3*7]
+            <p>
+                <b>Modele</b> są jedną z podstawowych abstrakcji używanych w warstwach TensorFlow.js. <b>Modele można</b> trenować, oceniać i używać do prognozowania.
+                 Stan modelu (topologia i opcjonalnie wytrenowane wagi) można przywrócić z różnych formatów.
+                 Modele to zbiór warstw
+                 <br>
+                 sieć neuronowa składa się z warstwy wejściowej, ukrytych i wyjściowej.
 
             </p>
-            
-            <hr>
-            <p>test1 model
-                <button type="submit" onclick="model()">Tensor scalarny</button>
+            <p>
+                Tworznenie modelu 
             </p>
-       
+            <hr>
+            <p>
+                <button type="submit" onclick="model()">Model 1</button>
+                
+            </p>
+            <hr>
+            <p>model relu softmax
+                <button type="submit" onclick="model2()">Model 2 relu</button>
+                <p>
+                 
+                        Funkcja aktywacji jest niezbędnym elementem przy projektowaniu sieci neuronowej. Wybór funkcji aktywacji daje kontrolę nad procesem uczenia modelu sieciowego.
+                         Po dodaniu tych funkcji w warstwach ukrytych, model będzie się efektywnie uczył. 
+                         Rodzaj predykcji zależy od wyboru funkcji aktywacji. Dlatego powinieneś starannie wybrać funkcję aktywacji dla każdej sieci głębokiego uczenia.
+                        <br>
+                        Funkcje aktywacji
+                        <br>
+                        <b>Funkcja aktywacji</b> oznacza transformację danych wejściowych za pomocą sumy ważonej do danych wyjściowych.
+                        Wykorzystuje ona pojedynczy węzeł lub więcej dla sieci do generowania predykcji.
+                        Można również odnieść się do funkcji aktywacji jako funkcji transferu. Lub, można nazwać to <b>squashing funkcji</b>, 
+                        gdy zakres wyjściowy ma ograniczenia. 
+                        Funkcje aktywacji mogą być również nieliniowe i określane jako nieliniowość projektu sieci.
+                  
+                </p>
+                <p>
+                Specyfikacja modelu:
+– specyfikacja architektury
+– typ neuronów ukrytych: liniowe, sigmoidalne, ReLU, 
+– typ neuronów wyjściowych: liniowe, sigmoidalne, softmax, ...
+                </p>
+                <p>
+                    Relu i softmax to funkcje aktywujące w głębokim uczeniu. Mamy też inne popularne wersje, takie jak sigmoid i leakyRelu.
+
+
+
+Relu to rodzaj funkcji aktywacji, która może być używana zarówno w warstwie ukrytej, jak i warstwie wyjściowej. 
+obiera dane wejściowe, a następnie generuje dane wyjściowe od 0 do 1. Tak więc otrzymujesz dane wyjściowe, 
+takie jak 0,1, 0,3, 0,9 jako wartości wyjściowe w Relu.
+
+Funkcji aktywacji sigmoid można używać zarówno w warstwie ukrytej, jak i w warstwie wyjściowej podczas pracy z klasyfikacją binarną. tj. 
+wyprowadza wynik między 0 a 1.
+
+Funkcja aktywacji Softmax jest używana głównie w warstwie wyjściowej i jest używana, gdy klasyfikujesz więcej niż 2 wyjścia.
+                </p>
+            </p>
+            
        
         </div>
         <div class="column">
-            <p id="test"></p>
-            <p id=""></p>
+   
+            <br>
+            Wynikiem wyjsciowym, jest rozmiar 4 
+            <p id="test">
+               
+            </p>
+            <hr>
+            <p id="model2"><br></p>
             <p id=""></p>
             <p id=""></p>
             <p id=""></p>
