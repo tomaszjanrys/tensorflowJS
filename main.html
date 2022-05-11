@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css" type="text/css">
+    <!-- Import TensorFlow.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+  <!-- Import tfjs-vis -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js"></script>
+
     <title>Document</title>
 </head>
 <body>
@@ -14,8 +19,106 @@
 </header>
 <main>
     <div class="container">
-        ss
+            <div class="column">
+                <p><strong>Tensory</strong> to wielowymiarowe tablice o jednolitym typie (nazywanym dtype )
+                    <b><u>nigdy nie można </u></b>zaktualizować zawartości tensora, a jedynie utworzyć nowy.
+                    <b>Rangi</b> mowia ile tensor ma osi. liczby mozna np. wymnazac [3*7]
+
+                </p>
+                
+                <hr>
+                <p>Tensor Scalarny zawiera jedna wartosc np. (1.333) nie zawiera osi. 
+                    <button type="submit" onclick="scalar()">Tensor scalarny</button>
+                </p>
+                <p>Tensor 1d - wektorowy posiada 1 os
+                    <button type="submit" onclick="test()">Tensor 1d</button>
+                </p>
+                
+                <p>Tensor 2d  -  posiada dwie osie 
+                    <button type="submit" onclick="test1()">Tensor 2d</button>    
+                </p>
+                <p>Tensor 3d  - macierz posiada trzy osie 
+                    <button type="submit" onclick="tensor3d()">Tensor 3d</button>    
+                </p>
+                <p>Tensor 6d
+                    <button type="submit" onclick="test2()">Tensor 6d</button>    
+                </p>
+               <hr>
+               <p>Zeros</p>
+               <p>
+                <button type="submit" onclick="zeros()">Zeros</button>    
+            </p>               
+               <hr>
+               <p>tensor string 1d 2d</p>
+               <p>
+                <button type="submit" onclick="tensorStr()">Tensor string</button>    
+            </p>               
+            </p>               
+               <hr>
+               <p>Buffer</p>
+               <p>
+                <button type="submit" onclick="buffer()">Tensor bufer</button>    
+            </p>               
+              
+            </p>               
+               <hr>
+               <p>linespace</p>
+               <p>
+                Zwraca równomiernie rozmieszczoną sekwencję liczb w podanym przedziale.
+                <button type="submit" onclick="linespace()">Tensor linespace</button>    
+            </p>               
+              
+           
+            </div>
+            <div class="column">
+                <p id="scalar"></p>
+                <p id="result"></p>
+                <p id="result1"></p>
+                <p id="result2"></p>
+                <p id="zeros"></p>
+                <p id="zeros1"></p>
+                <p id="zeros2"></p>
+                <p id="tensor3d"></p>
+                <p id="tensorStr"></p>
+                <p id="tensorStr2"></p>
+                <p id="buffer"></p>
+                <p id="linespace"></p>
+            </div>
     </div>
+    <!-- modele -->
+    <div class="container">
+        <div class="column">
+            <p><strong>Modele</strong> to wielowymiarowe tablice o jednolitym typie (nazywanym dtype )
+                <b><u>nigdy nie można </u></b>zaktualizować zawartości tensora, a jedynie utworzyć nowy.
+                <b>Rangi</b> mowia ile tensor ma osi. liczby mozna np. wymnazac [3*7]
+
+            </p>
+            
+            <hr>
+            <p>test1 model
+                <button type="submit" onclick="model()">Tensor scalarny</button>
+            </p>
+       
+       
+        </div>
+        <div class="column">
+            <p id="test"></p>
+            <p id=""></p>
+            <p id=""></p>
+            <p id=""></p>
+            <p id=""></p>
+            <p id=""></p>
+            <p id=""></p>
+            <p id=""></p>
+            <p id=""></p>
+            <p id=""></p>
+            <p id=""></p>
+            <p id=""></p>
+        </div>
+</div>
+
 </main>
+<script src="./js/01.js"></script>
+<script src="./js/02model.js"></script>
 </body>
 </html>
